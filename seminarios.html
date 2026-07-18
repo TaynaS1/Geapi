@@ -4,29 +4,85 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Geapi</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header class="main-header">
-     <div class="header-top">
-    <h1>Geapi</h1>
-        <a href="#" class="logo-link">
-        <img src="logo.png" alt="Logo" class="logo">
-    </a>
-    </div>
-<nav class="nav-container">
-    <ul class="nav-links" id="navLinks">
-        <li><a href="index.html">Início</a></li>
-        <li><a href="seminarios.html">Seminários</a></li>               
-        <li><a href="apresentacoes.html">Serviços</a></li>
-        </ul>
+    <header class="main-header">
+        <div class="header-top">
+            <h1>Geapi</h1>
+            <a href="#" class="logo-link">
+                <img src="logo.png" alt="Logo" class="logo">
+            </a>
+        </div>
+        <nav class="nav-container">
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="seminarios.html">Seminários</a></li>
+                <li><a href="apresentacoes.html">Serviços</a></li>
+            </ul>
         </nav>
-</header>
-<main class="container">
-    <section class="seminarios" id="seminarios">
-        <h2>Seminários</h2>
-        <p>.</p>
-    </section>
-</main>
-</body> 
+    </header>
+ 
+    <main class="container">
+        <section class="seminarios" id="seminarios">
+            <h2>Seminários</h2>
+            <p>A cada quinze (15) dias ocorre um seminário feito pelos participantes do grupo. Sendo que cada participante tem a oportunidade de apresentar um tema relacionado à apicultura e meliponicultura, promovendo a troca de conhecimentos e experiências entre os membros do grupo que compartilham suas experiências e conhecimentos com os participantes.</p>
+        </section>
+ 
+        <div class="slideshow-container">
+            <div class="slide fade">
+                <img src="imagem1.jpg" alt="Slide 1">
+            </div>
+            <div class="slide fade">
+                <img src="imagem2.jpg" alt="Slide 2">
+            </div>
+            <div class="slide fade">
+                <img src="imagem3.jpg" alt="Slide 3">
+            </div>
+ 
+            <a class="prev" onclick="mudarSlide(-1)">&#10094;</a>
+            <a class="next" onclick="mudarSlide(1)">&#10095;</a>
+ 
+            <div style="text-align:center">
+                <span class="dot" onclick="irParaSlide(1)"></span>
+                <span class="dot" onclick="irParaSlide(2)"></span>
+                <span class="dot" onclick="irParaSlide(3)"></span>
+            </div>
+        </div>
+    </main>
+ 
+    <script>
+        let slideAtual = 1;
+        mostrarSlides(slideAtual);
+ 
+        function mudarSlide(n) {
+            mostrarSlides(slideAtual += n);
+        }
+ 
+        function irParaSlide(n) {
+            mostrarSlides(slideAtual = n);
+        }
+ 
+        function mostrarSlides(n) {
+            const slides = document.getElementsByClassName("slide");
+            const dots = document.getElementsByClassName("dot");
+ 
+            if (n > slides.length) { slideAtual = 1; }
+            if (n < 1) { slideAtual = slides.length; }
+ 
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (let i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active-dot", "");
+            }
+ 
+            slides[slideAtual - 1].style.display = "block";
+            dots[slideAtual - 1].className += " active-dot";
+        }
+    </script>
+</body>
 </html>

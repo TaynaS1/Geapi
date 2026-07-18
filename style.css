@@ -125,7 +125,8 @@ body {
 }
 .informacoes,
 .objetivo,
-.atividades {
+.atividades,
+.seminarios {
     background-color: var(--branco);
     border-radius: 16px;
     padding: 40px;
@@ -133,7 +134,8 @@ body {
 }
 .informacoes h2,
 .objetivo h3,
-.atividades h4 {
+.atividades h4,
+.seminarios h2 {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 2rem;
     letter-spacing: .04em;
@@ -144,7 +146,8 @@ body {
 }
 .informacoes h2::after,
 .objetivo h3::after,
-.atividades h4::after {
+.atividades h4::after,
+.seminarios h2::after {
     content: "";
     position: absolute;
     bottom: 0;
@@ -188,10 +191,91 @@ body {
         margin: 20px auto;
     }
     .objetivo,
-    .atividades {
+    .atividades,
+    .seminarios {
         padding: 25px;
     }
     .atividades p {
         text-align: left;
+    }
+}
+.seminarios p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--cinza);
+    text-align: justify;
+    max-width: 850px;
+    margin: 0 auto;
+}
+.slideshow-container {
+    max-width: 800px;
+    width: 100%;
+    position: relative;
+    margin: 40px auto;
+}
+
+.slide {
+    display: none;
+}
+
+.slide img {
+    width: 100%;
+    display: block;
+    border-radius: 8px;
+}
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 12px;
+    margin-top: -22px;
+    color: var(--branco);
+    font-weight: bold;
+    font-size: 20px;
+    text-decoration: none;
+    transition: 0.3s ease;
+    user-select: none;
+    background-color: rgba(43, 29, 14, 0.4);
+    border-radius: 4px;
+}
+.next {
+    right: 10px;
+}
+.prev {
+    left: 10px;
+}
+.prev:hover, .next:hover {
+    background-color: rgba(43, 29, 14, 0.7);
+}
+.dot {
+    cursor: pointer;
+    height: 12px;
+    width: 12px;
+    margin: 0 4px;
+    background-color: var(--cinza-claro);
+    border: 1px solid var(--mel-escuro);
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.active-dot, .dot:hover {
+    background-color: var(--mel);
+}
+.fade {
+    animation: fadeEffect 0.8s;
+}
+
+@keyframes fadeEffect {
+    from { opacity: 0.4; }
+    to { opacity: 1; }
+}
+
+@media (max-width: 768px) {
+    .prev, .next {
+        padding: 8px;
+        font-size: 16px;
+        margin-top: -18px;
     }
 }
