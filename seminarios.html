@@ -27,11 +27,11 @@
 
         <nav class="nav-container" id="navContainer" aria-label="Navegação principal">
             <ul class="nav-links">
-                <li><a href="index.html" class="ativo" aria-current="page">Início</a></li>
-                <li><a href="seminarios.html">Seminários</a></li>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="seminarios.html" class="ativo" aria-current="page">Seminários</a></li>
                 <li><a href="eventos.html">Eventos</a></li>
                 <li><a href="projetos.html">Projetos</a></li>
-                <li></li>
+                <li><a href="participantes.html">Participantes</a></li>
             </ul>
         </nav>
     </div>
@@ -56,6 +56,7 @@
 
     <section class="galeria" id="galeria">
         <h2 class="section-title">Galeria</h2>
+
         <div class="slideshow-container">
             <div class="slide fade">
                 <img src="imagem1.jpg" alt="Registro de seminário 1 do GAPE">
@@ -87,7 +88,6 @@
     </div>
 </footer>
 
-<script src="menu.js"></script>
 <script>
     let slideAtual = 1;
     mostrarSlides(slideAtual);
@@ -118,8 +118,9 @@
         dots[slideAtual - 1].className += " active-dot";
     }
 </script>
+
 <script>
-// Menu mobile 
+// Menu mobile
 document.addEventListener("DOMContentLoaded", function () {
     const botao = document.getElementById("navToggle");
     const nav = document.getElementById("navContainer");
@@ -138,7 +139,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
-
 </script>
+
 </body>
 </html>
