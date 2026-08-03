@@ -3,50 +3,169 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Geapi</title>
+    <title>GAPE — Grupo de Estudos em Apicultura e Meliponicultura</title>
+    <meta name="description" content="Centro de informações, objetivos e atividades do GAPE, grupo de estudos em apicultura e meliponicultura do IFSULDEMINAS.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
 <header class="main-header">
-     <div class="header-top">
-    <h1>Geapi</h1>
-        <a href="#" class="logo-link">
-        <img src="logo.png" alt="Logo" class="logo">
-    </a>
-    </div>
-<nav class="nav-container">
-    <ul class="nav-links" id="navLinks">
-        <li><a href="index.html">Início</a></li>
-        <li><a href="seminarios.html">Seminários</a></li>               
-        <li><a href="apresentacoes.html">Serviços</a></li>
-        </ul>
-        </nav>
-</header>
-<main class="container">
-    <section class="informacoes" id="informacoes">
-        <h2>Centro de Informações</h2>
-        <ul>
-        <li>Coordenador(a): Hortência Aparecida Botelho</li>
-        <li>E-mail: hortencia.botelho@ifsuldeminas.edubr</li>
-        <li>Local de Funcionamento: Setor de Apicultura</li>           
-        <li>Área de Atuação: Pesquisa, Extensão, Ensino</li>
-        </ul>
-</section>
-<section class="objetivo" id="inicio">
-        <h3>Objetivo</h3>
-        <p>O GAPE tem como objetivo, proporcionar aos estudantes conhecimentos práticos sobre a produção de mel, incluindo o manejo das colmeias, o processamento e armazenamento do mel. Além disso, o grupo de estudos visa desenvolver habilidades na elaboração e execução de projetos de pesquisa na área apícola e promover a participação em atividades de extensão, como projetos e visitas técnicas. Simultaneamente, o grupo se dedica à realização de atividades na área de meliponicultura relacionadas à biologia e ecologia das abelhas sem ferrão, visando fomentar a educação ambiental e a conscientização sobre a importância da polinização e da biodiversidade.</p>
-</section>
-<section class="atividades" id="atividades">
-        <h4>Atividades Realizadas</h4>
-        <p>No Grupo de Estudos em Apicultura e Meliponicultura, são realizadas atividades:</p>
-        <ul>
-            <li>Manejo no apiário.</li>
-            <li>Mapeamento das abelhas sem ferrão no campus fazenda.</li>
-            <li>Beneficiamento do mel.</li>
-            <li>Apresentação de seminários sobre temas de apicultura e meliponicultura.</li>
-            <li>Visitas técnicas a empresas produtoras de mel.</li>
+    <div class="header-container">
+        <a href="index.html" class="logo-link" aria-label="Página inicial do GAPE">
+            <img src="logo.png" alt="Logo do GAPE" class="logo">
+        </a>
+
+        <button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="navContainer">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav class="nav-container" id="navContainer" aria-label="Navegação principal">
+            <ul class="nav-links">
+                <li><a href="index.html" class="ativo" aria-current="page">Início</a></li>
+                <li><a href="seminarios.html">Seminários</a></li>
+                <li><a href="eventos.html">Eventos</a></li>
+                <li><a href="projetos.html">Projetos</a></li>
+                <li></li>
             </ul>
- </section>
- </main>
+        </nav>
+    </div>
+</header>
+
+<section class="hero">
+    <div class="hero-content">
+        <span class="hero-eyebrow">IFSULDEMINAS · Setor de Apicultura</span>
+        <h1 class="hero-title">Grupo de Estudos em Apicultura e Meliponicultura</h1>
+        <p class="hero-subtitle">Da colmeia à mesa: ensino, pesquisa e extensão focados na valorização apícola.</p>
+    </div>
+</section>
+
+<main class="container">
+
+    <section class="informacoes" id="informacoes">
+        <h2 class="section-title">Centro de Informações</h2>
+        <ul class="info-grid">
+            <li class="info-card">
+                <div class="icon-wrapper">
+                    <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="3.4"/><path d="M4.5 20c1.2-4 4-6 7.5-6s6.3 2 7.5 6"/></svg>
+                </div>
+                <div>
+                    <span class="info-label">Coordenador(a)</span>
+                    <span class="info-valor">Hortência Aparecida Botelho</span>
+                </div>
+            </li>
+            <li class="info-card">
+                <div class="icon-wrapper">
+                    <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5.5" width="18" height="13" rx="2"/><path d="M3.5 6.5 12 13l8.5-6.5"/></svg>
+                </div>
+                <div>
+                    <span class="info-label">E-mail de Contato</span>
+                    <a class="info-valor info-link" href="mailto:hortencia.botelho@ifsuldeminas.edu.br">hortencia.botelho@ifsuldeminas.edu.br</a>
+                </div>
+            </li>
+            <li class="info-card">
+                <div class="icon-wrapper">
+                    <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.4"/></svg>
+                </div>
+                <div>
+                    <span class="info-label">Local de Funcionamento</span>
+                    <span class="info-valor">Setor de Apicultura</span>
+                </div>
+            </li>
+            <li class="info-card">
+                <div class="icon-wrapper">
+                    <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 5.5c2.2-1 5-1 8 .5v13c-3-1.5-5.8-1.5-8-.5Z"/><path d="M20 5.5c-2.2-1-5-1-8 .5v13c3-1.5 5.8-1.5 8-.5Z"/></svg>
+                </div>
+                <div>
+                    <span class="info-label">Áreas de Atuação</span>
+                    <span class="info-valor">Pesquisa, Extensão & Ensino</span>
+                </div>
+            </li>
+        </ul>
+    </section>
+
+    <section class="objetivo-card" id="inicio">
+        <h2 class="section-title">Objetivo do Grupo</h2>
+        <p>O <strong>GAPE</strong> tem como objetivo proporcionar aos estudantes conhecimentos práticos sobre a produção de mel, incluindo o manejo das colmeias, o processamento e o armazenamento do mel. Além disso, o grupo desenvolve habilidades na elaboração e execução de projetos de pesquisa na área apícola e promove a participação em atividades de extensão.</p>
+        <p>Simultaneamente, o grupo se dedica à realização de atividades em <strong>meliponicultura</strong> focadas na biologia e ecologia das abelhas sem ferrão, visando fomentar a educação ambiental e a conscientização sobre a importância da polinização e da biodiversidade.</p>
+    </section>
+
+    <section class="atividades" id="atividades">
+        <h2 class="section-title">Atividades Realizadas</h2>
+        <div class="texto-card">
+            <p class="atividades-intro">Confira algumas das principais ações vivenciadas pelos membros do grupo:</p>
+            <ul class="atividades-lista">
+                <li>
+                    <span class="badge">01</span>
+                    <div>
+                        <h3>Manejo no Apiário</h3>
+                        <p>Práticas diretas em campo para acompanhamento e manutenção do ecossistema das colmeias.</p>
+                    </div>
+                </li>
+                <li>
+                    <span class="badge">02</span>
+                    <div>
+                        <h3>Mapeamento de Espécies</h3>
+                        <p>Identificação e preservação das abelhas sem ferrão presentes no campus fazenda.</p>
+                    </div>
+                </li>
+                <li>
+                    <span class="badge">03</span>
+                    <div>
+                        <h3>Beneficiamento do Mel</h3>
+                        <p>Processos adequados para extração, filtragem, armazenamento e padrão de qualidade.</p>
+                    </div>
+                </li>
+                <li>
+                    <span class="badge">04</span>
+                    <div>
+                        <h3>Seminários Acadêmicos</h3>
+                        <p>Apresentações e estudos contínuos sobre avanços no setor de apicultura e meliponicultura.</p>
+                    </div>
+                </li>
+                <li>
+                    <span class="badge">05</span>
+                    <div>
+                        <h3>Visitas Técnicas</h3>
+                        <p>Imersão em empresas e produtores parceiros para vivência prática de mercado.</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+</main>
+
+<footer class="main-footer">
+    <div class="footer-content">
+        <p><strong>GAPE</strong> · Grupo de Estudos em Apicultura e Meliponicultura</p>
+        <span class="footer-sub">IFSULDEMINAS - Campus Machado</span>
+    </div>
+</footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const botao = document.getElementById("navToggle");
+    const nav = document.getElementById("navContainer");
+
+    if (!botao || !nav) return;
+
+    botao.addEventListener("click", function () {
+        const aberto = nav.classList.toggle("aberto");
+        botao.setAttribute("aria-expanded", aberto ? "true" : "false");
+    });
+
+    nav.querySelectorAll("a").forEach(function (link) {
+        link.addEventListener("click", function () {
+            nav.classList.remove("aberto");
+        });
+    });
+});
+</script>
 </body>
 </html>

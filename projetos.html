@@ -40,44 +40,18 @@
 <section class="hero">
     <div class="hero-content">
         <span class="hero-eyebrow">IFSULDEMINAS · Setor de Apicultura</span>
-        <h1 class="hero-title">Seminários do GAPE</h1>
-        <p class="hero-subtitle">Encontros quinzenais para compartilhar estudos, práticas e descobertas do grupo.</p>
+        <h1 class="hero-title">Serviços do GAPE</h1>
+        <p class="hero-subtitle">Apresentações, produtos e serviços oferecidos pelo grupo à comunidade.</p>
     </div>
 </section>
 
 <main class="container">
-
-    <section class="seminarios" id="seminarios">
-        <h2 class="section-title">Como funcionam</h2>
+    <section class="servicos" id="servicos">
+        <h2 class="section-title">Em breve</h2>
         <div class="texto-card">
-            <p>A cada quinze (15) dias ocorre um seminário feito pelos participantes do grupo. Cada participante tem a oportunidade de apresentar um tema relacionado à apicultura e à meliponicultura, promovendo a troca de conhecimentos e experiências entre os membros, que compartilham suas vivências e aprendizados com os demais participantes.</p>
+            <p>Esta página está em construção. Em breve você encontrará aqui os projetos de pesquisa,extensão e ensino.</p>
         </div>
     </section>
-
-    <section class="galeria" id="galeria">
-        <h2 class="section-title">Galeria</h2>
-        <div class="slideshow-container">
-            <div class="slide fade">
-                <img src="imagem1.jpg" alt="Registro de seminário 1 do GAPE">
-            </div>
-            <div class="slide fade">
-                <img src="imagem2.jpg" alt="Registro de seminário 2 do GAPE">
-            </div>
-            <div class="slide fade">
-                <img src="imagem3.jpg" alt="Registro de seminário 3 do GAPE">
-            </div>
-
-            <a class="prev" onclick="mudarSlide(-1)" aria-label="Slide anterior">&#10094;</a>
-            <a class="next" onclick="mudarSlide(1)" aria-label="Próximo slide">&#10095;</a>
-
-            <div class="slideshow-dots">
-                <span class="dot" onclick="irParaSlide(1)" aria-label="Ir para o slide 1"></span>
-                <span class="dot" onclick="irParaSlide(2)" aria-label="Ir para o slide 2"></span>
-                <span class="dot" onclick="irParaSlide(3)" aria-label="Ir para o slide 3"></span>
-            </div>
-        </div>
-    </section>
-
 </main>
 
 <footer class="main-footer">
@@ -89,37 +63,6 @@
 
 <script src="menu.js"></script>
 <script>
-    let slideAtual = 1;
-    mostrarSlides(slideAtual);
-
-    function mudarSlide(n) {
-        mostrarSlides(slideAtual += n);
-    }
-
-    function irParaSlide(n) {
-        mostrarSlides(slideAtual = n);
-    }
-
-    function mostrarSlides(n) {
-        const slides = document.getElementsByClassName("slide");
-        const dots = document.getElementsByClassName("dot");
-
-        if (n > slides.length) { slideAtual = 1; }
-        if (n < 1) { slideAtual = slides.length; }
-
-        for (let i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
-        }
-        for (let i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace(" active-dot", "");
-        }
-
-        slides[slideAtual - 1].style.display = "block";
-        dots[slideAtual - 1].className += " active-dot";
-    }
-</script>
-<script>
-// Menu mobile 
 document.addEventListener("DOMContentLoaded", function () {
     const botao = document.getElementById("navToggle");
     const nav = document.getElementById("navContainer");
@@ -134,11 +77,9 @@ document.addEventListener("DOMContentLoaded", function () {
     nav.querySelectorAll("a").forEach(function (link) {
         link.addEventListener("click", function () {
             nav.classList.remove("aberto");
-            botao.setAttribute("aria-expanded", "false");
         });
     });
 });
-
 </script>
 </body>
 </html>
