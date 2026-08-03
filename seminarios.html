@@ -4,26 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Geapi</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="main-header">
-        <div class="header-top">
-            <h1>Geapi</h1>
-            <a href="#" class="logo-link">
-                <img src="logo.png" alt="Logo" class="logo">
-            </a>
-        </div>
-        <nav class="nav-container">
-            <ul class="nav-links" id="navLinks">
-                <li><a href="index.html">Início</a></li>
-                <li><a href="seminarios.html">Seminários</a></li>
-                <li><a href="apresentacoes.html">Serviços</a></li>
-            </ul>
+<header class="main-header">
+     <div class="header-top">
+    <h1>Geapi</h1>
+        <a href="#" class="logo-link">
+        <img src="logo.png" alt="Logo" class="logo">
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+    </div>
+<nav class="nav-container">
+    <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="seminarios.html">Seminários</a></li>               
+        <li><a href="eventos.html">Eventos</a></li>
+        <li><a href="Projetos.html">Projetos</a></li>
+        <li><a href="participantes.html">Participantes</a></li>
+        </ul>
         </nav>
+</header>
     </header>
  
     <main class="container">
@@ -53,7 +58,6 @@
             </div>
         </div>
     </main>
- 
     <script>
         let slideAtual = 1;
         mostrarSlides(slideAtual);
@@ -83,6 +87,45 @@
             slides[slideAtual - 1].style.display = "block";
             dots[slideAtual - 1].className += " active-dot";
         }
+     </script>
+     <script>
+        let slideAtual2 = 2;
+        mostrarSlides(slideAtual2);
+ 
+        function mudarSlide(n) {
+            mostrarSlides(slideAtual2 += n);
+        }
+ 
+        function irParaSlide(n) {
+            mostrarSlides(slideAtual2 = n);
+        }
+ 
+        function mostrarSlides(n) {
+            const slides = document.getElementsByClassName("slide");
+            const dots = document.getElementsByClassName("dot");
+ 
+            if (n > slides.length) { slideAtual = 1; }
+            if (n < 1) { slideAtual = slides.length; }
+ 
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (let i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active-dot", "");
+            }
+ 
+            slides[slideAtual - 1].style.display = "block";
+            dots[slideAtual - 1].className += " active-dot";
+        }
     </script>
+    <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+
+    menuToggle.addEventListener('click', function() {
+        navLinks.classList.toggle('active');
+        menuToggle.classList.toggle('active');
+    });
+</script>
 </body>
 </html>

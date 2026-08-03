@@ -13,12 +13,20 @@
         <a href="#" class="logo-link">
         <img src="logo.png" alt="Logo" class="logo">
     </a>
+    <!-- Botão do menu mobile -->
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
     </div>
 <nav class="nav-container">
     <ul class="nav-links" id="navLinks">
         <li><a href="index.html">Início</a></li>
         <li><a href="seminarios.html">Seminários</a></li>               
-        <li><a href="apresentacoes.html">Serviços</a></li>
+        <li><a href="eventos.html">Eventos</a></li>
+        <li><a href="Projetos.html">Projetos</a></li>
+        <li><a href="participantes.html">Participantes</a></li>
         </ul>
         </nav>
 </header>
@@ -48,5 +56,16 @@
             </ul>
  </section>
  </main>
+
+<script>
+    // Alterna o menu mobile ao clicar no botão hambúrguer
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+
+    menuToggle.addEventListener('click', function() {
+        navLinks.classList.toggle('active');
+        menuToggle.classList.toggle('active');
+    });
+</script>
 </body>
 </html>
