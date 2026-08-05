@@ -29,17 +29,18 @@
             <nav class="nav-container" id="navContainer" aria-label="Navegação principal">
                 <ul class="nav-links">
                     <li><a href="index.html">Início</a></li>
-                    <li><a href="seminarios.html" class="ativo" aria-current="page">Seminários</a></li>
+                    <li><a href="seminarios.html">Seminários</a></li>
                     <li><a href="eventos.html">Eventos</a></li>
                     <li><a href="projetos.html">Projetos</a></li>
-                    <li><a href="participantes.html">Participantes</a></li>
+                    <li><a href="participantes.html" class="ativo" aria-current="page">Participantes</a></li>
                 </ul>
             </nav>
         </div>
     </header>
-    <section class="hero">
+
+     <section class="hero">
         <div class="hero-content"> 
-            <h1 class="hero-title">Seminários</h1>
+            <h1 class="hero-title">Participantes</h1>
             <span
             class="hero-eyebrow">IFSULDEMINAS · Setor de Apicultura</span>
         </div>
@@ -47,35 +48,10 @@
 
     <main class="container">
 
-        <section class="seminarios" id="seminarios">
-            <h2 class="section-title">Como Funcionam</h2>
+        <section class="participantes" id="participantes">
+            <h2 class="section-title">Em Breve</h2>
             <div class="texto-card">
-                <p>A cada quinze (15) dias ocorre um seminário feito pelos participantes do grupo. Cada participante tem a oportunidade de apresentar um tema relacionado à apicultura e à meliponicultura, promovendo a troca de conhecimentos e experiências entre os membros, que compartilham suas vivências e aprendizados com os demais participantes.</p>
-            </div>
-        </section>
-
-        <section class="galeria" id="galeria">
-            <h2 class="section-title">Galeria</h2>
-
-            <div class="slideshow-container">
-                <div class="slide fade">
-                    <img src="imagem1.jpg" alt="Registro de seminário 1 do GAPE">
-                </div>
-                <div class="slide fade">
-                    <img src="imagem2.jpg" alt="Registro de seminário 2 do GAPE">
-                </div>
-                <div class="slide fade">
-                    <img src="imagem3.jpg" alt="Registro de seminário 3 do GAPE">
-                </div>
-
-                <a class="prev" onclick="mudarSlide(-1)" aria-label="Slide anterior">&#10094;</a>
-                <a class="next" onclick="mudarSlide(1)" aria-label="Próximo slide">&#10095;</a>
-
-                <div class="slideshow-dots">
-                    <span class="dot" onclick="irParaSlide(1)" aria-label="Ir para o slide 1"></span>
-                    <span class="dot" onclick="irParaSlide(2)" aria-label="Ir para o slide 2"></span>
-                    <span class="dot" onclick="irParaSlide(3)" aria-label="Ir para o slide 3"></span>
-                </div>
+                <p>Esta página está em construção. Em breve você encontrará aqui os participantes, contribuições e histórias dos membros do GAPE.</p>
             </div>
         </section>
 
@@ -89,35 +65,6 @@
     </footer>
 
     <script>
-        let slideAtual = 1;
-        mostrarSlides(slideAtual);
-
-        function mudarSlide(n) {
-            mostrarSlides(slideAtual += n);
-        }
-
-        function irParaSlide(n) {
-            mostrarSlides(slideAtual = n);
-        }
-
-        function mostrarSlides(n) {
-            const slides = document.getElementsByClassName("slide");
-            const dots = document.getElementsByClassName("dot");
-
-            if (n > slides.length) { slideAtual = 1; }
-            if (n < 1) { slideAtual = slides.length; }
-
-            for (let i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-            for (let i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace(" active-dot", "");
-            }
-
-            slides[slideAtual - 1].style.display = "block";
-            dots[slideAtual - 1].className += " active-dot";
-        }
-
         document.addEventListener("DOMContentLoaded", function () {
             const botao = document.getElementById("navToggle");
             const nav = document.getElementById("navContainer");

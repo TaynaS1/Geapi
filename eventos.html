@@ -10,70 +10,80 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="logo.png">
 </head>
 <body>
 
-<header class="main-header">
-    <div class="header-container">
-        <a href="index.html" class="logo-link" aria-label="Página inicial do GAPE">
-            <img src="logo.png" alt="Logo do GAPE" class="logo">
-        </a>
+    <header class="main-header">
+        <div class="header-container">
+            <a href="index.html" class="logo-link" aria-label="Página inicial do GAPE">
+                <img src="logo.png" alt="Logo do GAPE" class="logo">
+            </a>
 
-        <button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="navContainer">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
+            <button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="navContainer">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
 
-        <nav class="nav-container" id="navContainer" aria-label="Navegação principal">
-            <ul class="nav-links">
-                <li><a href="index.html" class="ativo" aria-current="page">Início</a></li>
-                <li><a href="seminarios.html">Seminários</a></li>
-                <li><a href="eventos.html">Eventos</a></li>
-                <li><a href="projetos.html">Projetos</a></li>
-                <li></li>
-            </ul>
-        </nav>
-    </div>
-</header>
+            <nav class="nav-container" id="navContainer" aria-label="Navegação principal">
+                <ul class="nav-links">
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="seminarios.html">Seminários</a></li>
+                    <li><a href="eventos.html" class="ativo" aria-current="page">Eventos</a></li>
+                    <li><a href="projetos.html">Projetos</a></li>
+                    <li><a href="participantes.html">Participantes</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-<section class="hero">
-    <div class="hero-content">
-        <span class="hero-eyebrow">IFSULDEMINAS · Setor de Apicultura</span>
-        <h1 class="hero-title">Grupo de Estudos em Apicultura e Meliponicultura</h1>
-        <p class="hero-subtitle">Da colmeia à mesa: ensino, pesquisa e extensão focados na valorização apícola.</p>
-    </div>
-</section>
+    <section class="hero">
+        <div class="hero-content"> 
+            <h1 class="hero-title">Eventos</h1>
+            <span
+            class="hero-eyebrow">IFSULDEMINAS · Setor de Apicultura</span>
+        </div>
+    </section>
 
-<main class="container">
+    <main class="container">
 
-</main>
+        <section class="eventos" id="eventos">
+            <h2 class="section-title">Em Breve</h2>
+            <div class="texto-card">
+                <p>Esta página está em construção. Em breve você encontrará aqui os eventos realizados, participações em feiras, palestras e demais atividades de extensão do GAPE.</p>
+            </div>
+        </section>
 
-<footer class="main-footer">
-    <div class="footer-content">
-        <p><strong>GAPE</strong> · Grupo de Estudos em Apicultura e Meliponicultura</p>
-        <span class="footer-sub">IFSULDEMINAS - Campus Machado</span>
-    </div>
-</footer>
+    </main>
 
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-    const botao = document.getElementById("navToggle");
-    const nav = document.getElementById("navContainer");
+     <footer class="main-footer">
+        <div class="footer-content">
+            <p><strong>GEAPI</strong></p>
+            <span class="footer-sub">IFSULDEMINAS - Campus Machado</span>
+        </div>
+    </footer>
 
-    if (!botao || !nav) return;
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const botao = document.getElementById("navToggle");
+            const nav = document.getElementById("navContainer");
 
-    botao.addEventListener("click", function () {
-        const aberto = nav.classList.toggle("aberto");
-        botao.setAttribute("aria-expanded", aberto ? "true" : "false");
-    });
+            if (!botao || !nav) return;
 
-    nav.querySelectorAll("a").forEach(function (link) {
-        link.addEventListener("click", function () {
-            nav.classList.remove("aberto");
+            botao.addEventListener("click", function () {
+                const aberto = nav.classList.toggle("aberto");
+                botao.setAttribute("aria-expanded", aberto ? "true" : "false");
+            });
+
+            nav.querySelectorAll("a").forEach(function (link) {
+                link.addEventListener("click", function () {
+                    nav.classList.remove("aberto");
+                    botao.setAttribute("aria-expanded", "false");
+                });
+            });
         });
-    });
-});
-</script>
+    </script>
+
 </body>
 </html>
