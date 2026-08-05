@@ -347,20 +347,6 @@ a {
     padding-bottom: 0;
 }
 
-.badge {
-    flex-shrink: 0;
-    font-family: var(--font-heading);
-    font-size: 1.3rem;
-    color: var(--primary);
-    background-color: var(--primary-light);
-    width: 38px;
-    height: 38px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-}
-
 .atividades-lista h3 {
     font-size: 1.1rem;
     color: var(--accent);
