@@ -1,6 +1,4 @@
-/*cores*/
 :root {
-    /* Cores principais */
     --fundo: #1a1207;
     --mel: #f5a623;
     --mel-claro: #ffd166;
@@ -9,8 +7,6 @@
     --texto: #2b1d0e;
     --cinza: #6b5842;
     --cinza-claro: #f4e8d0;
-
-    /* Mapeamento de tema para a estrutura do CSS */
     --primary: var(--mel);
     --primary-hover: var(--mel-escuro);
     --primary-light: var(--cinza-claro);
@@ -20,8 +16,6 @@
     --text-main: var(--texto);
     --text-muted: var(--cinza);
     --border-color: rgba(107, 88, 66, 0.2);
-
-    /* Tipografia & Utilitários */
     --font-heading: 'Georgia', serif;
     --font-body: system-ui, -apple-system, sans-serif;
     --radius-sm: 4px;
@@ -58,7 +52,6 @@ a {
     color: inherit;
 }
 
-/* Header */
 .main-header {
     background-color: #FFFFFF;
     border-bottom: 1px solid var(--border-color);
@@ -160,7 +153,6 @@ a {
     transform: translateY(-7px) rotate(-45deg);
 }
 
-/* Hero */
 .hero {
     background: linear-gradient(135deg, var(--accent) 0%, #ce974a 100%);
     color: #FFFFFF;
@@ -213,7 +205,6 @@ a {
     font-weight: 300;
 }
 
-/* Layout principal */
 .container {
     max-width: 1100px;
     margin: 3rem auto;
@@ -242,7 +233,6 @@ a {
     margin-top: 4px;
 }
 
-/* Cards de informação */
 .info-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -308,7 +298,6 @@ a {
     text-decoration: underline;
 }
 
-/* Cards de texto (Objetivo / Seminários / Serviços / Atividades) */
 .objetivo-card,
 .texto-card {
     background-color: var(--bg-card);
@@ -331,7 +320,6 @@ a {
     margin-bottom: 0;
 }
 
-/* Lista unificada de atividades (dentro do texto-card) */
 .atividades-intro {
     margin-bottom: 1.5rem;
 }
@@ -384,7 +372,6 @@ a {
     color: var(--text-muted);
 }
 
-/* Slideshow */
 .slideshow-container {
     max-width: 900px;
     margin: 0 auto;
@@ -465,7 +452,6 @@ a {
     background-color: var(--primary);
 }
 
-/* Rodapé */
 .main-footer {
     background-color: var(--accent);
     color: #FFFFFF;
@@ -484,14 +470,12 @@ a {
     color: #B9A98A;
 }
 
-/* Responsivo — tablets */
 @media (max-width: 900px) {
     .hero-title {
         font-size: 2.7rem;
     }
 }
 
-/* Responsivo — celulares */
 @media (max-width: 768px) {
     .header-container {
         padding: 0.75rem 1.25rem;
